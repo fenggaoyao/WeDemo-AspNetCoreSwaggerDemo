@@ -25,10 +25,13 @@ namespace AspNetCoreSwaggerDemo.Controllers
             });
         }
 
+        [HttpGet]
         public IActionResult Hello()
         {
             return Ok("hello world");
         }
+
+
 
 
 
