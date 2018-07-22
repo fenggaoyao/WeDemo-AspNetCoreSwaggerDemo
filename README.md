@@ -1,7 +1,5 @@
 ## asp.net core中使用Swashbuckle.AspNetCore(swagger)生成接口文档        
 > Swashbuckle.AspNetCore:swagger的asp.net core实现          
-> 项目地址：https://github.com/domaindrivendev/Swashbuckle.AspNetCore       
-> 仔细看了下readme,发现在百度找半天的东西其实readme里面就有...   
 
 ### demo预览
 ![图片](https://dn-coding-net-production-pp.qbox.me/0772a4d2-6949-4888-948a-ba98a34d840d.png)       
