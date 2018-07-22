@@ -24,6 +24,14 @@ namespace AspNetCoreSwaggerDemo.Controllers
                 UserName = result               
             });
         }
+
+        public IActionResult Hello()
+        {
+            return Ok("hello world");
+        }
+
+
+
         [HttpPost]
         public IActionResult TestPost(string item)
         {
