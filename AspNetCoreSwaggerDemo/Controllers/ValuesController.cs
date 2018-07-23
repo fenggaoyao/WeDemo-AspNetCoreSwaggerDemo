@@ -42,7 +42,44 @@ namespace AspNetCoreSwaggerDemo.Controllers
         [HttpGet]
         public IActionResult test()
         {
-            return Ok("test");
+            Random rnext = new Random();            
+            return Ok(rnext.Next(1, 100));
+        }
+
+        [HttpGet]
+        public IActionResult Gauge()
+        {
+            return Ok(new {
+                width=800,
+                height =800,
+                stateData =new [] {
+                    new {
+                    state="停机",
+                    value=0.3,
+                    color= "'#F00"
+                    },
+
+                     new {
+                    state="换模",
+                    value=0.5,
+                    color= "'#63F"
+                    },
+
+                      new {
+                    state="生产",
+                    value=0.2,
+                    color= "'#3E3"
+                    }
+
+                } ,
+                curState=new {
+                    state="生产",
+                    value=60,
+                    color= "#3E3"
+                },
+                curProgress=30,
+                delivery= "3day"
+            });
         }
 
         [HttpPost]
