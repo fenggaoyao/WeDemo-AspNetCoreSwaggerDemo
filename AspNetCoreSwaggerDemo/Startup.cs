@@ -49,7 +49,7 @@ namespace AspNetCoreSwaggerDemo
                 c.IncludeXmlComments(xmlPath);
                 c.OperationFilter<AssignOperationVendorExtensions>();
                 c.DocumentFilter<ApplyTagDescriptions>();
-            });
+            });           
 
             services.AddMvc();
             return services.BuildServiceProvider();
@@ -58,9 +58,15 @@ namespace AspNetCoreSwaggerDemo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyHeader();
+                builder.AllowAnyMethod();
+                builder.AllowAnyOrigin();
+            });
             //if (env.IsDevelopment())
             //{
-                app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {

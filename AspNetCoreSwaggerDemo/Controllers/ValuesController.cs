@@ -6,13 +6,14 @@ using AspNetCoreSwaggerDemo.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreSwaggerDemo.Utils;
+using Microsoft.AspNetCore.Cors;
 
 namespace AspNetCoreSwaggerDemo.Controllers
 {
     /// <summary>
     /// 测试
     /// </summary>
-    [UserAuthorize]
+    [UserAuthorize]    
     public class ValuesController : BaseApiController
     {
         [HttpGet]
