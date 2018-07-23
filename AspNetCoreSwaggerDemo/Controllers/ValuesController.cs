@@ -56,19 +56,19 @@ namespace AspNetCoreSwaggerDemo.Controllers
                     new {
                     state="停机",
                     value=0.3,
-                    color= "'#F00"
+                    color= "#F00"
                     },
 
                      new {
                     state="换模",
                     value=0.5,
-                    color= "'#63F"
+                    color= "#63F"
                     },
 
                       new {
                     state="生产",
                     value=0.2,
-                    color= "'#3E3"
+                    color= "#3E3"
                     }
 
                 } ,
