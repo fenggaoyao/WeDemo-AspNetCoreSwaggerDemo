@@ -39,8 +39,11 @@ namespace AspNetCoreSwaggerDemo.Controllers
             return Ok("Jenkins+Docker自动化");
         }
 
-
-
+        [HttpGet]
+        public IActionResult test()
+        {
+            return Ok("test");
+        }
 
         [HttpPost]
         public IActionResult TestPost(string item)
