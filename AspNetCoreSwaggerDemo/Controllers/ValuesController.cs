@@ -33,6 +33,12 @@ namespace AspNetCoreSwaggerDemo.Controllers
             return Ok("hello world");
         }
 
+        [HttpGet]
+        public IActionResult Jenkins()
+        {
+            return Ok("Jenkins+Docker自动化");
+        }
+
 
 
 
