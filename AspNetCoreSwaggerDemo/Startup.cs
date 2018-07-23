@@ -75,6 +75,7 @@ namespace AspNetCoreSwaggerDemo
             ServiceLocator.Configure(app.ApplicationServices);
             app.UseStaticFiles();
             app.UseMvc();
+            
         }
     }
 }
