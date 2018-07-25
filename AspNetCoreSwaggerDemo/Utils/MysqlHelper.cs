@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AspNetCoreSwaggerDemo.Utils
 {
     public class MysqlHelper
@@ -44,8 +45,13 @@ namespace AspNetCoreSwaggerDemo.Utils
         }
         public static string Search()
         { 
-           return con.QueryFirst<string>("select UserName from User where Id=1");            
-         
+           return con.QueryFirst<string>("select UserName from User where Id=1");          
         }
+
+        public static IEnumerable<dynamic> GetJson()        {
+           
+            return con.Query("select * from User");
+        }
+
     }
 }

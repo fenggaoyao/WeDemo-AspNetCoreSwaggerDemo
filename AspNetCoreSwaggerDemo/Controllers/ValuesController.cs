@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreSwaggerDemo.Utils;
 using Microsoft.AspNetCore.Cors;
+using Newtonsoft.Json;
 
 namespace AspNetCoreSwaggerDemo.Controllers
 {
@@ -31,7 +32,7 @@ namespace AspNetCoreSwaggerDemo.Controllers
         [HttpGet]
         public IActionResult HelloWorld()
         {
-            return Ok("hello world");
+            return Ok(JsonConvert.SerializeObject(MysqlHelper.GetJson())); 
         }
 
         [HttpGet]
