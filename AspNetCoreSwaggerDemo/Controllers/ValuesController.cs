@@ -34,14 +34,18 @@ namespace AspNetCoreSwaggerDemo.Controllers
         {
             return Ok(
                 new {
-                    results=JsonConvert.SerializeObject(MysqlHelper.GetJson())
+                    results=MysqlHelper.GetJson()
                 });                  
         }
 
         [HttpGet]
         public IActionResult Jenkins()
         {
-            return Ok("Jenkins+Docker自动化");
+            return Ok(
+                new
+                {
+                    results = MysqlHelper.GetJson2()
+                });
         }
 
         [HttpGet]

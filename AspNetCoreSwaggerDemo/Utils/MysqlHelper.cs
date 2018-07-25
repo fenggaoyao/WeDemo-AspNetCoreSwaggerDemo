@@ -48,10 +48,31 @@ namespace AspNetCoreSwaggerDemo.Utils
            return con.QueryFirst<string>("select UserName from User where Id=1");          
         }
 
-        public static IEnumerable<dynamic> GetJson()        {
+        public static List<User> GetJson()        {
            
+            return con.Query<User>("select * from User").ToList();
+        }
+
+        public static IEnumerable<dynamic> GetJson2()
+        {
+
             return con.Query("select * from User");
         }
 
     }
+
+    public class User
+    {
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int Gender { get; set; }
+        public DateTime Birthday  { get; set; }
+        public int CreateUserId { get; set; }
+        public DateTime CreateDate { get; set; }
+        public int UpdateUserId { get; set; }
+        public DateTime UpdateDate { get; set; }
+        public int IsDeleted { get; set; }
+    }
+
 }
