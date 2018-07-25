@@ -32,7 +32,10 @@ namespace AspNetCoreSwaggerDemo.Controllers
         [HttpGet]
         public IActionResult HelloWorld()
         {
-            return Ok(JsonConvert.SerializeObject(MysqlHelper.GetJson())); 
+            return Ok(
+                new {
+                    results=JsonConvert.SerializeObject(MysqlHelper.GetJson())
+                });                  
         }
 
         [HttpGet]
